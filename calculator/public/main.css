@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background: #FFF;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 1080px;
+}
+
+.container .container-cal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h1{
+    color: #000;
+    font-family: Nunito Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 400px;
+}
+
+
+.calculator{
+    width: 430px;
+    height: 835px;
+    flex-shrink: 0;
+    border-radius: 41px;
+    background: rgba(216, 217, 218, 0.67);
+    box-shadow: 19px 17px 28px 0px rgba(0, 0, 0, 0.10);
+}
+
+/* show number */
+
+.container-cal .calculator #showBox{
+    width: 100%;
+    height: 23%;
+    font-size: 40px;
+    font-weight: 700;
+    border: none;
+    background: none;
+    border-radius: 41px;
+    outline: none;
+    text-align: right;
+}
+
+.calculator .boxCal{
+    width: 430px;
+    height: 628px;
+    flex-shrink: 0;
+    border-radius: 41px;
+    background: #FFF;
+    box-shadow: 0px -12px 24px 0px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    position: absolute;
+}
+
+/* grid  icon*/
+
+.calculator .boxCal .item-col{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 107px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px  100px;
+    gap: 8px;
+    padding: 10px;
+}
+/* 
+.calculator .boxCal .item-col #dark{
+    grid-column-start: span 2;
+    grid-column-end: 3;
+} */
+
+
+#clean,#del,#replication,#bracket,#percentage,#division,#seven,#eight,#two,#nine,#minus,#four,#five,#six,#divite,#three,#one,#plus,#zero,#dark,#equal{
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #D9D9D9;
+    
+
+    /* font */
+    font-family: Nunito Sans;
+    color: #000;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 10px;
+}
+
+/* color icon */
+
+#clean{
+    background: #FFC6AC;
+    color: #ED7B7B;
+    transition: .3s ease-in-out;
+}
+
+#clean:hover{
+    background: #F31559;
+    color: #fff;
+}
+
+#division,#minus,#divite,#plus,#equal,#replication{
+    background: #FFB84C;
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+#division:hover,#minus:hover,#divite:hover,#plus:hover,#equal:hover,#replication:hover {
+    background: #FD8D14;
+}
+
+/* 61677A */
+
+#bracket,#percentage,#seven,#eight,#nine,#four,#five,#six,#two,#three,#two,#one,#zero,#dark,#del{
+    background: #D9D9D9;
+    transition: .3s ease-in-out;
+}
+
+#bracket:hover,#del:hover,#percentage:hover,#seven:hover,#eight:hover,#nine:hover,#four:hover,#five:hover,#six:hover,#two:hover,#three:hover,#two:hover,#one:hover,#zero:hover,#dark:hover{
+    background: #61677A;
+    color: #fff;
+}
+
+
+#bracket{
+    cursor:not-allowed;
+}
+
+
+
+
+/* light and dark */
+
+
+.button{
+    text-align: center;
+    cursor: pointer;
+}
+
+/* .button svg{
+    width: 31.991px;
+    height: 31.001px;
+    flex-shrink: 0;
+    fill: #000;a
+} */
+
+
+/* dark mdoe */
+
+.darkModeButton{
+    z-index: 99;
+}
+.dark-mode{
+    border-radius: 41px;
+    background: rgb(13, 12, 12);
+    box-shadow: 19px 17px 28px 0px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode h1{
+    color: #fff;
+}
+
+.dark-mode h1 a{
+    color: #1A5D1A;
+    transition: .3s ease-in-out;
+}
+ 
+.dark-mode h1 a:hover{
+    color: #2ea02e;
+}
+
+.dark-mode .calculator{
+    width: 430px;
+    height: 835px;
+    flex-shrink: 0;
+    border-radius: 41px;
+    background: rgb(14, 13, 13);
+    box-shadow: 19px 17px 28px 0px rgba(187, 186, 186, 0.1);
+}
+
+.dark-mode #showBox{
+    color: #fff;
+}
+
+.dark-mode .boxCal {
+    border-radius: 41px;
+    background: #000;
+    box-shadow: 0px -12px 24px 0px rgba(255, 255, 255, 0.10);
+}
+
+
+.dark-mode .item-col #bracket {
+    border-radius: 10px;
+    background: #131212;
+    color: #fff;
+}
+
+
+/* Dark mode styles for specific buttons */
+.dark-mode .item-col #percentage,
+.dark-mode .item-col #seven,
+.dark-mode .item-col #eight,
+.dark-mode .item-col #nine,
+.dark-mode .item-col #four,
+.dark-mode .item-col #five,
+.dark-mode .item-col #six,
+.dark-mode .item-col #two,
+.dark-mode .item-col #three,
+.dark-mode .item-col #two,
+.dark-mode .item-col #one,
+.dark-mode .item-col #zero,
+.dark-mode .item-col #dark,
+.dark-mode .item-col #del {
+    border-radius: 10px;
+    background: #131212;
+    color: #fff;
+}
+
+/* Dark mode button hover styles */
+.dark-mode .item-col #percentage:hover,
+.dark-mode .item-col #seven:hover,
+.dark-mode .item-col #eight:hover,
+.dark-mode .item-col #nine:hover,
+.dark-mode .item-col #four:hover,
+.dark-mode .item-col #five:hover,
+.dark-mode .item-col #six:hover,
+.dark-mode .item-col #two:hover,
+.dark-mode .item-col #three:hover,
+.dark-mode .item-col #two:hover,
+.dark-mode .item-col #one:hover,
+.dark-mode .item-col #zero:hover,
+.dark-mode .item-col #dark:hover,
+.dark-mode .item-col #del:hover {
+    background-color: #2D033B;
+    color: white;
+}
+
+
+.light-mode-icon {
+    display: inline-block; /* Show light mode icon by default */
+    width: 32px;
+    height: 31px;
+    fill: #000;
+}
+
+.dark-mode-icon {
+    display: none; /* Hide dark mode icon by default */
+    width: 32px;
+    height: 31px;
+}
+
+/* When dark mode is active */
+.dark-mode .light-mode-icon {
+    display: none; /* Hide light mode icon */
+    width: 32px;
+    height: 31px;
+    fill: #fff;
+}
+
+.dark-mode .dark-mode-icon {
+    display: inline-block; /* Show dark mode icon */
+    width: 32px;
+    height: 31px;
+}
+
