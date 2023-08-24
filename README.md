@@ -36,7 +36,7 @@ For a hands-on experience, you can explore the live demo of the calculator app h
 🤝 Contributions and Feedback:
 I welcome any contributions, suggestions, or feedback you might have. Feel free to open issues or submit pull requests if you'd like to collaborate on enhancing the app!
 
-Email 📬 festimreci@outlook.com  website 🌐 https://festim-calculatorapp.netlify.app/public/
+Email 📬 festimreci@outlook.com  website 🌐 https://festim-calculatorapp.netlify.app
 
 
 
