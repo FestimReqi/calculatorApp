@@ -28,6 +28,16 @@ body{
     width: 400px;
 }
 
+.container h1 a{
+    color: #000;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+.container h1 a:hover{
+    color: #cacaca;
+}
+
 
 .calculator{
     width: 430px;
@@ -41,7 +51,7 @@ body{
 /* show number */
 
 .container-cal .calculator #showBox{
-    width: 100%;
+    width: 95%;
     height: 23%;
     font-size: 40px;
     font-weight: 700;
@@ -50,6 +60,7 @@ body{
     border-radius: 41px;
     outline: none;
     text-align: right;
+    text-indent:-9999px
 }
 
 .calculator .boxCal{
@@ -276,3 +287,112 @@ body{
     height: 31px;
 }
 
+
+@media only screen and (max-width: 600px){
+    .calculator{
+        width: 344px;
+        height: 668px;
+        flex-shrink: 0;
+        border-radius: 41px;
+        background: rgba(216, 217, 218, 0.67);
+        box-shadow: 19px 17px 28px 0px rgba(0, 0, 0, 0.10);
+    }
+    /* darkmode */
+    .dark-mode .calculator{
+        width: 344px;
+        height: 668px;
+        flex-shrink: 0;
+        border-radius: 41px;
+        background: rgb(14, 13, 13);
+        box-shadow: 19px 17px 28px 0px rgba(187, 186, 186, 0.1);
+    }
+    .dark-mode .boxCal {
+        border-radius: 41px;
+        background: #000;
+        box-shadow: 0px -12px 24px 0px rgba(255, 255, 255, 0.10);
+        width: 344px;
+        height: 502.4px;
+        flex-shrink: 0;
+        border-radius: 41px;
+        bottom: 0;
+        position: absolute;
+    }
+    
+    
+    .calculator .boxCal{
+        width: 344px;
+        height: 502.4px;
+    }
+
+    
+    #clean,#del,#replication,#bracket,#percentage,#division,#seven,#eight,#two,#nine,#minus,#four,#five,#six,#divite,#three,#one,#plus,#zero,#dark,#equal{
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        background: #D9D9D9;
+        
+
+        /* font */
+        font-family: Nunito Sans;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 10px;
+    }
+
+    .calculator .boxCal .item-col{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 80px 80px 80px 80px;
+        grid-template-rows: 80px 80px 80px 80px ;
+        gap: 8px;
+        padding: 10px;
+    }
+        
+    /* color icon */
+
+    #clean{
+        background: #FFC6AC;
+        color: #ED7B7B;
+        transition: .3s ease-in-out;
+    }
+
+    #clean:hover{
+        background: #F31559;
+        color: #fff;
+    }
+
+    #division,#minus,#divite,#plus,#equal,#replication{
+        background: #FFB84C;
+        color: #fff;
+        transition: .3s ease-in-out;
+    }
+
+    #division:hover,#minus:hover,#divite:hover,#plus:hover,#equal:hover,#replication:hover {
+        background: #FD8D14;
+    }
+
+    /* 61677A */
+
+    #bracket,#percentage,#seven,#eight,#nine,#four,#five,#six,#two,#three,#two,#one,#zero,#dark,#del{
+        background: #D9D9D9;
+        transition: .3s ease-in-out;
+    }
+
+    #bracket:hover,#del:hover,#percentage:hover,#seven:hover,#eight:hover,#nine:hover,#four:hover,#five:hover,#six:hover,#two:hover,#three:hover,#two:hover,#one:hover,#zero:hover,#dark:hover{
+        background: #61677A;
+        color: #fff;
+    }
+
+
+    #bracket{
+        cursor:not-allowed;
+    }
+
+
+    
+}
